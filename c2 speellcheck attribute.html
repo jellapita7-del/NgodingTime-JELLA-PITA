@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>spellcheck Attribute Examples</title>
+
+    <script type="text/javascript">
+
+        function cekSpellcheck() {
+            alert("Spellcheck aktif pada elemen ini.");
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h1>spellcheck Attribute Examples</h1>
+
+    <p>
+        Spellcheck on:
+        <span spellcheck="true">
+            There is a tyyypooo here. Did the browser spot it?
+        </span>
+    </p>
+
+    <p>
+        Spellcheck off:
+        <span spellcheck="false">
+            There is a tyyypooo here. Did the browser spot it?
+        </span>
+    </p>
+
+    <p>
+        Text field: (spellcheck on)
+        <input
+            type="text"
+            spellcheck="true"
+            value="There is a tyyypooo here. Did">
+    </p>
+
+    <p>
+        Text field: (spellcheck off)
+        <input
+            type="text"
+            spellcheck="false"
+            value="There is a tyyypooo here. Did">
+    </p>
+
+    <p>
+        Text area: (spellcheck on)
+        <textarea
+            spellcheck="true"
+            rows="2"
+            cols="18">There is a tyyypooo here. Did the</textarea>
+    </p>
+
+    <p>
+        Text area: (spellcheck off)
+        <textarea
+            spellcheck="false"
+            rows="2"
+            cols="18">There is a tyyypooo here. Did the</textarea>
+    </p>
+
+</body>
+</html>

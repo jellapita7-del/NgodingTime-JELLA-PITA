@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New school drag and drop</title>
+
+    <style>
+        h2 {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            padding: 6px 0;
+            margin: 10px 13px;
+        }
+
+        #drag1 {
+            width: 70px;
+            height: 70px;
+            background-color: #9fc4f5;
+            border: 1px solid #777;
+            padding: 2px;
+            margin-left: 18px;
+            cursor: move;
+        }
+
+        #dropZone {
+            width: 125px;
+            height: 125px;
+            background-color: #eee;
+            border: 1px solid #777;
+            margin-left: 132px;
+            margin-top: -78px;
+            padding: 2px;
+        }
+
+        #result {
+            width: 488px;
+            height: 145px;
+            border: 1px solid #aaa;
+            margin-left: 29px;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>New school drag and drop</h2>
+
+    <div id="drag1" draggable="true"
+         ondragstart="drag(event)">
+        Drag me!
+    </div>
+
+    <div id="dropZone"
+         ondrop="drop(event)"
+         ondragover="allowDrop(event)">
+        Drop here!
+    </div>
+
+    <div id="result"
+         ondrop="drop(event)"
+         ondragover="allowDrop(event)">
+    </div>
+
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function drop(event) {
+            event.preventDefault();
+
+            var data = event.dataTransfer.getData("text");
+            var element = document.getElementById(data);
+
+            event.target.appendChild(element);
+        }
+    </script>
+
+</body>
+</html>

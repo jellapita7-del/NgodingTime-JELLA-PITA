@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Simple Scale</title>
+    <script type="text/javascript">
+        window.onload = function() {
+
+            // Canvas 1 - ukuran normal
+            var canvas1 = document.getElementById("canvas1");
+            var context1 = canvas1.getContext("2d");
+            writeBoxes(context1);
+
+
+            // Canvas 2 - tall and thin
+            var canvas2 = document.getElementById("canvas2");
+            var context2 = canvas2.getContext("2d");
+
+            context2.scale(0.5, 1.5);
+            writeBoxes(context2);
+
+
+            // Canvas 3 - short and wide
+            var canvas3 = document.getElementById("canvas3");
+            var context3 = canvas3.getContext("2d");
+
+            context3.scale(1.75, 0.2);
+            writeBoxes(context3);
+        }
+
+
+        function writeBoxes(context) {
+            context.fillStyle = "#d9a5a5";
+            context.fillRect(0, 0, 100, 100);
+            context.fillStyle = "#899492";
+            context.fillRect(50, 50, 100, 100);
+            context.fillStyle = "#91aaa7";
+            context.fillRect(50, 100, 100, 100);
+            context.fillStyle = "#d9a5a5";
+            context.fillRect(100, 100, 100, 100);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Simple Scale</h1>
+
+    <canvas id="canvas1" width="300" height="300"
+            style="border: 1px solid black;">
+        <strong>Canvas Supporting Browser Required</strong>
+    </canvas>
+
+    <canvas id="canvas2" width="300" height="300"
+            style="border: 1px solid black;">
+        <strong>Canvas Supporting Browser Required</strong>
+    </canvas>
+
+    <canvas id="canvas3" width="300" height="300"
+            style="border: 1px solid black;">
+        <strong>Canvas Supporting Browser Required</strong>
+    </canvas>
+
+</body>
+</html>

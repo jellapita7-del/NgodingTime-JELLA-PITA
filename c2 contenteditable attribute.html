@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>contenteditable Attribute Examples</title>
+
+    <script type="text/javascript">
+
+        function editText(element) {
+            element.contentEditable = true;
+            element.focus();
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h1>contenteditable Attribute Examples</h1>
+
+    <p>
+        This is a standard paragraph of text. You cannot edit it.
+        This is a standard paragraph of text. You cannot edit it.
+        This is a standard paragraph of text. You cannot edit it.
+        This is a standard paragraph of text. You cannot edit it.
+    </p>
+
+    <p contenteditable="true">
+        This paragraph of text is editable. Click it and you will see.
+        Of course there is no sense of saving it with code to transmit
+        the information to the server. This paragraph of text is editable.
+        Click it and you will see. Of course there is no sense of saving it
+        with code to transmit the information to the server.
+    </p>
+
+    <p ondblclick="editText(this)">
+        This paragraph uses some simple script to be editable.
+        Double-click the text to begin editing.
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Simple Rotation</title>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            var canvas1 = document.getElementById("canvas1");
+            var context1 = canvas1.getContext("2d");
+            context1.rotate(Math.PI / 8);
+            writeBoxes(context1);
+            var canvas2 = document.getElementById("canvas2");
+            var context2 = canvas2.getContext("2d");
+            context2.rotate(-Math.PI / 8);
+            writeBoxes(context2);
+        }
+        function writeBoxes(context) {
+            context.fillStyle = "#d9a5a5";
+            context.fillRect(0, 0, 100, 100);
+            context.fillStyle = "#899492";
+            context.fillRect(50, 50, 100, 100);
+            context.fillStyle = "#91aaa7";
+            context.fillRect(50, 100, 100, 100);
+            context.fillStyle = "#d9a5a5";
+            context.fillRect(100, 100, 100, 100);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Simple Rotation</h1>
+
+    <canvas id="canvas1" width="300" height="300"
+            style="border: 1px solid black;">
+        <strong>Canvas Supporting Browser Required</strong>
+    </canvas>
+
+    <canvas id="canvas2" width="300" height="300"
+            style="border: 1px solid black;">
+        <strong>Canvas Supporting Browser Required</strong>
+    </canvas>
+
+</body>
+</html>
